@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Type Racer</title>
+    <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet' type='text/css'>
+    <script>
+        $(document).ready(function(){
+            $("#begin").click(function(){
+                $("#begin").hide();
+            })
+        })
+    </script>
+</head>
+
+<style>
+    body {
+        text-align: center;
+        background: url("blackboard.jpg") no-repeat fixed;
+        -webkit-background-size: cover ;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .title{
+        font-family: 'Bad Script', sans-serif;
+        font-size: 32px;
+        letter-spacing: 2px;
+        color: #F3F2F2;
+        text-align: center;
+        position: relative;
+    }
+
+    .Score{
+        font-family: 'Bad Script', sans-serif;
+        font-size: 24px;
+        color: #FF7373;
+        position: absolute;
+        text-align: center;
+        left: 400px;
+        top: 500px;
+    }
+
+    .Time{
+        font-family: 'Bad Script', sans-serif;
+        font-size: 24px;
+        color: #FF7373;
+        position: absolute;
+        text-align: center;
+        right: 400px;
+        top: 500px;
+    }
+
+    .Words{
+        font-family: 'Bad Script', sans-serif;
+        font-size: 48px;
+        color: #F3F2F2;
+        letter-spacing: 2px;
+        text-align: center;
+        top: 175px;
+        position: relative;
+    }
+
+    mark.correct{
+        color: #39FF14;
+    ;
+        background: none;
+        text-decoration: underline;
+
+    }
+
+    mark.wrong{
+        color: #CE4646;
+        background: none;
+        text-decoration: underline;
+
+
+    }
+    input[type="button"]{
+        border: none;
+        outline: none;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 15px 20px;
+        background-color: #FF7373;
+        box-shadow: 0px 5px 0px 0px #CE4646;
+        margin: 0 auto;
+        font-size: 24px;
+        color: #F3F2F2;
+        position: relative;
+        text-align: center;
+        top: 400px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    input[type="button"]:active {
+        -webkit-transform: translate(0px, 5px);
+        transform: translate(0px, 5px);
+        box-shadow: 0px 1px 0px 0px;
+
+    }
+</style>
+
+<body>
+<p class="title">Welcome To Type Racing</p>
+<div class="Score">
+    <p>Score</p>
+    <span id="score">0</span>
+</div>
+<div class="Time">
+    <p>Time</p>
+    <span id="time">60</span>
+</div>
+<div class="Words">
+    <span id="words"></span>
+</div>
+<input type="button" id="begin" name="begin" value="Begin"/>
+<script src="typeScript.js"></script>
+</body>
+</html>
